@@ -36,7 +36,6 @@
     "@angular/cli": "~14.2.4",
     "@angular/compiler-cli": "^14.2.0",
     "@types/jasmine": "~4.0.0",
-    "@types/maplibre-gl": "^1.14.0",
     "@types/node": "^18.8.3",
     "jasmine-core": "~4.3.0",
     "karma": "~6.4.0",

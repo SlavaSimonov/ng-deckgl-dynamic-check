@@ -3,7 +3,7 @@ import { ScatterplotLayer, TextLayer, IconLayer, PathLayer } from "@deck.gl/laye
 import { SelectedColor } from "../consts/entity-colors";
 import { IconMappingNames, ICON_MAPPING } from "../consts/icon-mapping";
 import { EntityBinData } from "../models/entity-bin-data";
-
+import icon from "../../assets/"
 
 
 
