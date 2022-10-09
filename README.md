@@ -1,4 +1,4 @@
-*** Angular + Deck.GL + MapLibre Dynamic Entities load test ***
+***Angular + Deck.GL + MapLibre Dynamic Entities load test***
 
 [ng-deckgl-dynamic-check](https://slavasimonov.github.io/ng-deckgl-dynamic-check/)
 

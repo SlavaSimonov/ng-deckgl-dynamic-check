@@ -35,6 +35,7 @@
           },
           "configurations": {
             "production": {
+              "baseHref": "/ng-deckgl-dynamic-check/",
               "budgets": [
                 {
                   "type": "initial",
