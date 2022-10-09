@@ -35,8 +35,14 @@ footer {
 aside {
     display: flex;
     gap: 1em;
+    align-items: flex-start;
     position: fixed;
+    pointer-events: none;
     top: 1em;
     left: 1em;
     z-index: 2;
+
+    & > * {
+        pointer-events: auto;
+    }
 }
