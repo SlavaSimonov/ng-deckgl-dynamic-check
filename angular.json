@@ -23,7 +23,6 @@
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
-            "baseHref": "/ng-deckgl-dynamic-check/",
             "assets": [
               "src/favicon.ico",
               "src/assets"
