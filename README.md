@@ -2,6 +2,8 @@
 
 [ng-deckgl-dynamic-check](https://slavasimonov.github.io/ng-deckgl-dynamic-check/)
 
+[![screenshot](/.github/assets/ng-deck-screen.png)](https://slavasimonov.github.io/ng-deckgl-dynamic-check/)
+
 - - -
 
 ## Project Description
