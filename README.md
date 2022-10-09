@@ -1,3 +1,9 @@
+*** Angular + Deck.GL + MapLibre Dynamic Entities load test ***
+
+[ng-deckgl-dynamic-check](https://slavasimonov.github.io/ng-deckgl-dynamic-check/)
+
+- - -
+
 ## Project Description
 
 This project is an [Angular](https://angular.io/) client, that uses [MapLibre](https://maplibre.org/) and [Deck.GL](https://deck.gl/) to render a large quantity of entities on a map, where each entity has a point, icon, label and some have polygon.All entities are dynamic and change position every now and then. Entities geometries are generated randomly using [TurfJS](https://turfjs.org/) random package.
@@ -22,7 +28,7 @@ Entities are drawn using following layers:
 
 ### Performance Optimization
 
-Initially performance was not great, so I've followed (this performance optimization guide)[https://deck.gl/docs/developer-guide/performance] and implemented direct supply of binary attributes to the layers. [Typed Arrays](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray) calculation happens in a separate [Web Worker](https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Using_web_workers). It improved the performance significantly. As I understand deck.gl does these calculations on a main thread, but when attributes provided directly as TypedArrays deck.gl sends them straight to GPU shaders.
+Initially performance was not great, so I've followed [this performance optimization guide](https://deck.gl/docs/developer-guide/performance) and implemented direct supply of binary attributes to the layers. [Typed Arrays](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray) calculation happens in a separate [Web Worker](https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Using_web_workers). It improved the performance significantly. As I understand deck.gl does these calculations on a main thread, but when attributes provided directly as TypedArrays deck.gl sends them straight to GPU shaders.
 
 ## Plans for this repo
 
