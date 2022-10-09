@@ -14,8 +14,6 @@ import { TooltipContent } from '@deck.gl/core/typed/lib/tooltip';
 import { MetricsDataService } from '../metrics/metrics-data.service';
 import { DeckMetrics } from '@deck.gl/core/typed/lib/deck';
 
-const url = new URL('./map.worker', import.meta.url);
-console.log(url);
 const MapWorker: Worker | undefined = typeof Worker !== 'undefined'
   ? new Worker(URL.createObjectURL(new Blob(["(" + workerFunc.toString() + ")()"], { type: 'text/javascript' })))
   : undefined;
