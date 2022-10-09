@@ -1,0 +1,15 @@
+.slider-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 1em;
+
+    & > :first-child {
+        flex: 1;
+    }
+
+    & > :last-child {
+        width: 7ch;
+        text-align: center;
+    }
+}

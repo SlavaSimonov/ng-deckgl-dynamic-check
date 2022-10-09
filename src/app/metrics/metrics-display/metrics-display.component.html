@@ -1,0 +1,22 @@
+<app-expandable-card class="hover-opacity" [defaultIsExpanded]="false" [titleText]="'FPS: ' + (metrics | async)?.fps"
+    titleTextExpanded="Performance metrics" width="20em">
+    <br>
+    <mat-card-content>
+        <div class="metric-container">
+            <p>FPS</p>
+            <h2>{{(metrics | async)?.fps}}</h2>
+        </div>
+        <div class="metric-container">
+            <p>CPU Time/Frame</p>
+            <h2>{{(metrics | async)?.cpuTimePerFrame}}ms</h2>
+        </div>
+        <div class="metric-container">
+            <p>GPU Time/Frame</p>
+            <h2>{{(metrics | async)?.gpuTimePerFrame}}ms</h2>
+        </div>
+        <div class="metric-container">
+            <p>GPU Memory Usage</p>
+            <h2>{{(metrics | async)?.gpuMemory}} MB</h2>
+        </div>
+    </mat-card-content>
+</app-expandable-card>

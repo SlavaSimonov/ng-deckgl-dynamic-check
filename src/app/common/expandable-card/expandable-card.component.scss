@@ -1,0 +1,8 @@
+mat-card-title-group {
+    display: flex;
+    align-items: end;
+
+    & :first-child {
+        flex-grow: 1;
+    }
+}

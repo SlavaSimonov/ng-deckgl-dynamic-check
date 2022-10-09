@@ -1,0 +1,11 @@
+<mat-card [style.width]="width">
+    <mat-card-title-group>
+        <mat-card-title>{{isExpanded ? titleTextExpanded : titleText}}
+        </mat-card-title>
+        <button mat-icon-button [matTooltip]="isExpanded ? 'Hide' : 'Change'" (click)="isExpanded = !isExpanded">
+            <mat-icon>{{isExpanded ? 'expand_less' : 'expand_more'}}</mat-icon>
+        </button>
+    </mat-card-title-group>
+    <ng-content *ngIf="isExpanded">
+    </ng-content>
+</mat-card>

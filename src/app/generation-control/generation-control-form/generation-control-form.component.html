@@ -1,0 +1,52 @@
+<app-expandable-card class="hover-opacity" [defaultIsExpanded]="true" [titleText]="'Showing ' + currentDisplayEntities + ' entities'"
+    titleTextExpanded="Entities generation options" width="30em">
+    <br>
+    <mat-card-content>
+        <div class="slider-container">
+            <span>Layers:</span>
+            <mat-slider min="0" max="20" thumbLabel [(value)]="genConfig.layersCount">
+            </mat-slider>
+            <span>({{genConfig.layersCount}})</span>
+        </div>
+        <div class="slider-container">
+            <span>Entities per layer:</span>
+            <mat-slider min="0" max="25000" step="100" thumbLabel [(value)]="genConfig.entitiesInLayer"
+                [displayWith]="entitiesCountLabel">
+            </mat-slider>
+            <span>({{genConfig.entitiesInLayer}})</span>
+        </div>
+        <div class="slider-container">
+            <span>Entities w/ polygon (%):</span>
+            <mat-slider min="0" max="100" thumbLabel [(value)]="genConfig.polygonEntities" [displayWith]="percentLabel">
+            </mat-slider>
+            <span>({{genConfig.polygonEntities}}%)</span>
+        </div>
+        <div class="slider-container">
+            <span>Max points in polygon:</span>
+            <mat-slider min="3" max="100" thumbLabel [(value)]="genConfig.pointsInPolygon">
+            </mat-slider>
+            <span>({{genConfig.pointsInPolygon}})</span>
+        </div>
+        <div class="slider-container">
+            <span>Updating entities (%):</span>
+            <mat-slider min="0" max="100" thumbLabel [(value)]="genConfig.updatingEntities"
+                [displayWith]="percentLabel">
+            </mat-slider>
+            <span>({{genConfig.updatingEntities}}%)</span>
+        </div>
+        <div *ngIf="genConfig.updatingEntities && genConfig.updatingEntities > 0" class="slider-container">
+            <span>Updating rate (s):</span>
+            <mat-slider min="1" max="10" thumbLabel [(value)]="genConfig.updatingRate" [displayWith]="secondsLabel">
+            </mat-slider>
+            <span>({{genConfig.updatingRate}}s)</span>
+        </div>
+        <br>
+        <h3>Rendering a total of <b>{{currentDisplayEntities}}</b> entities
+        </h3>
+    </mat-card-content>
+    <mat-divider></mat-divider>
+    <mat-card-actions align="end">
+        <button mat-stroked-button color="primary" (click)="applyDefaultConfig()">Default</button>
+        <button mat-raised-button color="primary" (click)="applyGenConfig()">Apply</button>
+    </mat-card-actions>
+</app-expandable-card>

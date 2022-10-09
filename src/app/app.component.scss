@@ -1,0 +1,42 @@
+@use '@angular/material' as mat;
+
+main {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+
+    & .main-section {
+        flex-grow: 1;
+    }
+}
+
+footer {
+    text-align: center;
+    background-color: black;
+    color: white;
+    font-size: 0.9em;
+    padding: 0.2em 1em;
+    user-select: none;
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+
+    & p {
+        margin: 0;
+    }
+
+    & a {
+        color: white;
+    }
+}
+
+aside {
+    display: flex;
+    gap: 1em;
+    position: fixed;
+    top: 1em;
+    left: 1em;
+    z-index: 2;
+}

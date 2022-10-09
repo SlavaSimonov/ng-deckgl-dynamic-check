@@ -1,0 +1,14 @@
+.metric-container {
+    display: flex;
+    align-items: baseline;
+    gap: 1em;
+
+    & :first-child {
+        flex-grow: 1;
+    }
+
+    & :last-child {
+        width: 10ch;
+        text-align: center;
+    }
+}
