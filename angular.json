@@ -35,7 +35,6 @@
           },
           "configurations": {
             "production": {
-              "baseHref": "/ng-deckgl-dynamic-check/",
               "budgets": [
                 {
                   "type": "initial",
@@ -55,6 +54,9 @@
                 }
               ],
               "outputHashing": "all"
+            },
+            "github-pages": {
+              "baseHref": "/ng-deckgl-dynamic-check/"
             },
             "development": {
               "buildOptimizer": false,

@@ -56,7 +56,7 @@ export class EntityLayer extends CompositeLayer<Required<EntityProps>> {
           }
         },
         pickable: false,
-        iconAtlas: '/assets/spy.png',
+        iconAtlas: './assets/spy.png',
         iconMapping: ICON_MAPPING,
         sizeScale: 1,
         getSize: 20,
