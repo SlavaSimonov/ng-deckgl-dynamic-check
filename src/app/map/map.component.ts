@@ -6,7 +6,7 @@ import { Entity } from 'src/app/models/entity';
 import { EntityLayer } from 'src/app/layers/entity-layer';
 import { groupBy } from "lodash";
 import { SelectedColor } from 'src/app/consts/entity-colors';
-import { workerFunc } from './map.worker';
+import { entityDataToBin } from '../web-workers/map.worker';
 import { Layer } from '@deck.gl/core/typed';
 import { EntityBinData } from '../models/entity-bin-data';
 import { GenerationControlService } from '../generation-control/generation-control.service';
@@ -15,7 +15,7 @@ import { MetricsDataService } from '../metrics/metrics-data.service';
 import { DeckMetrics } from '@deck.gl/core/typed/lib/deck';
 
 const MapWorker: Worker | undefined = typeof Worker !== 'undefined'
-  ? new Worker(URL.createObjectURL(new Blob(["(" + workerFunc.toString() + ")()"], { type: 'text/javascript' })))
+  ? new Worker(URL.createObjectURL(new Blob(["(" + entityDataToBin.toString() + ")()"], { type: 'text/javascript' })))
   : undefined;
 
 @Component({
@@ -66,7 +66,7 @@ export class MapComponent implements AfterViewInit {
     if (entityName) {
       const [layer, index] = entityName.split('-');
       return {
-        text: `Entity: {Layer id: ${layer.slice(1, -1)}, Index: ${index}}`,
+        text: `Entity: [Layer Id: ${layer.slice(1, -1)}, Index: ${index}]`,
         style: {
           borderRadius: '0.5em',
           backgroundColor: '#0000007F',

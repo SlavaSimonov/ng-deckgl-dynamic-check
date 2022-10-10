@@ -1,8 +1,8 @@
-<mat-card [style.width]="width">
-    <mat-card-title-group>
+<mat-card [style.min-width]="minWidth">
+    <mat-card-title-group  (click)="isExpanded = !isExpanded">
         <mat-card-title>{{isExpanded ? titleTextExpanded : titleText}}
         </mat-card-title>
-        <button mat-icon-button [matTooltip]="isExpanded ? 'Hide' : 'Change'" (click)="isExpanded = !isExpanded">
+        <button mat-icon-button [matTooltip]="isExpanded ? 'Hide' : 'Show'">
             <mat-icon>{{isExpanded ? 'expand_less' : 'expand_more'}}</mat-icon>
         </button>
     </mat-card-title-group>

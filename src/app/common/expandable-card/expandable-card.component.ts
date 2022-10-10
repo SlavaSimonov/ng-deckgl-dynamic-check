@@ -6,7 +6,7 @@ import { Component, Input, OnInit, OnChanges, SimpleChanges } from '@angular/cor
   styleUrls: ['./expandable-card.component.scss']
 })
 export class ExpandableCardComponent implements OnInit, OnChanges {
-  @Input() width: string = '200px';
+  @Input() minWidth: string = '0';
   @Input() defaultIsExpanded: boolean = true;
   @Input() titleText: string = '';
   @Input() titleTextExpanded: string = '';

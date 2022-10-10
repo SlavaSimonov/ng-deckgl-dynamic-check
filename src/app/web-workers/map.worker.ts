@@ -4,7 +4,7 @@ import { SelectedColor } from "../consts/entity-colors";
 import { Entity } from "../models/entity";
 import { EntityBinData } from "../models/entity-bin-data";
 
-export function workerFunc() {
+export function entityDataToBin() {
   addEventListener('message', ({ data }: { data: { entities: Entity[], layerId: number, SelectedColor: typeof SelectedColor, configVersion: number } }) => {
     const { entities, layerId, configVersion, SelectedColor } = data;
     const binaryData: EntityBinData = {

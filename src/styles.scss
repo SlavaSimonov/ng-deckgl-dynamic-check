@@ -43,13 +43,3 @@ body, html, div {
 }
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
-
-.hover-opacity {
-  opacity: 0.7;
-  transition: opacity 1s 1s ease-out;
-
-  &:hover {
-      opacity: 1;
-      transition: opacity 300ms ease-in;
-  }
-}

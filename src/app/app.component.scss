@@ -33,13 +33,17 @@ footer {
 }
 
 aside {
+    $el_gap: 1em;
+
     display: flex;
-    gap: 1em;
-    align-items: flex-start;
+    gap: $el_gap;
+    flex-wrap: wrap;
+    width: calc(100vw - (2 * $el_gap));
     position: fixed;
     pointer-events: none;
-    top: 1em;
-    left: 1em;
+    top: 0;
+    left: 0;
+    margin: $el_gap;
     z-index: 2;
 
     & > * {

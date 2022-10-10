@@ -1,7 +1,9 @@
 mat-card-title-group {
     display: flex;
-    align-items: end;
-
+    align-items: flex-end;
+    cursor: pointer;
+    user-select: none;
+    
     & :first-child {
         flex-grow: 1;
     }

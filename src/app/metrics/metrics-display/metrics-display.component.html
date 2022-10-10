@@ -1,5 +1,5 @@
-<app-expandable-card class="hover-opacity" [defaultIsExpanded]="false" [titleText]="'FPS: ' + (metrics | async)?.fps"
-    titleTextExpanded="Performance metrics" width="20em">
+<app-expandable-card [defaultIsExpanded]="false" [titleText]="'FPS: ' + ((metrics | async)?.fps ?? '-')" minWidth="18ch"
+    titleTextExpanded="Performance metrics">
     <br>
     <mat-card-content>
         <div class="metric-container">
